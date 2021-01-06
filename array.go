@@ -23,7 +23,7 @@ func main() {
 	fmt.Println(values[1])
 	fmt.Println(values[2])
 
-	//len only return capacity of the array, not return how many data already in array
+	//len only return size of the array, not return how many data already in array
 	fmt.Println(len(names))
 	fmt.Println(len(values))
 
