@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type Filter func(string) string //make an alias for func func(string) string with name : Filter
+type fltr func(string) string //make an alias for func func(string) string with name : Filter
 
 //function as parameter
-func sayHelloWithFilter(name string, filter Filter) { //or (name string, filter func(string) string)
+func sayHelloWithFilter(name string, filter fltr) { //or (name string, filter func(string) string)
 	nameFiltered := filter(name)
 	fmt.Println("Hello,", nameFiltered)
 }
@@ -13,9 +13,8 @@ func sayHelloWithFilter(name string, filter Filter) { //or (name string, filter 
 func spamFilter(name string) string {
 	if name == "anjing" {
 		return "..."
-	} else {
-		return name
 	}
+	return name
 
 }
 
